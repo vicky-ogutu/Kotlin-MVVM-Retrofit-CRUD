@@ -1,3 +1,4 @@
+package com.example.kotlin_crud
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -6,6 +7,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.kotlin_crud.PostViewModel
+import com.example.kotlin_crud.UiState
 
 @Composable
 fun CrudScreen(viewModel: PostViewModel = viewModel()) {
@@ -66,7 +69,7 @@ fun CrudScreen(viewModel: PostViewModel = viewModel()) {
 }
 
 @Composable
-fun PostItemCard(post: Post, onUpdate: () -> Unit, onDelete: () -> Unit) {
+fun PostItemCard(post: com.example.kotlin_crud.Post, onUpdate: () -> Unit, onDelete: () -> Unit) {
     Card(modifier = Modifier.fillMaxWidth(), elevation = CardDefaults.cardElevation(4.dp)) {
         Column(modifier = Modifier.padding(12.dp)) {
             Text(text = post.title, style = MaterialTheme.typography.titleMedium)

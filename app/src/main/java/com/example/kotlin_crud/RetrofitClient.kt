@@ -1,7 +1,9 @@
-import retrofit2.Retrofit
-import retrofit2.converter.gson:GsonConverterFactory
+package com.example.kotlin_crud
 
-object RetrofitClient {
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+ object RetrofitClient {
     private const val BASE_URL = "https://typicode.com" // Example Mock API
 
     val apiService: PostApiService by lazy {

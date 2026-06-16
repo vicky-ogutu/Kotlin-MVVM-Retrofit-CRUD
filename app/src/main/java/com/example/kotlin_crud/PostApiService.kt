@@ -1,3 +1,6 @@
+package com.example.kotlin_crud
+
+import retrofit2.Response
 import retrofit2.http.*
 
 interface PostApiService {
@@ -15,5 +18,5 @@ interface PostApiService {
 
     // DELETE
     @DELETE("posts/{id}")
-    suspend fun deletePost(@Path("id") id: Int): retrofit2.Response<Unit>
+    suspend fun deletePost(@Path("id") id: Int): Response<Unit>
 }
